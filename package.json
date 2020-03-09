@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www.mjs",
-    "dev": "nodemon bin/www.mjs"
+    "start": ".\\lib\\oracle\\windows\\run.cmd",
+    "dev_w": ".\\lib\\oracle\\windows\\dev.cmd"
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
@@ -16,6 +16,7 @@
     "jquery": "^3.4.1",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.2",
+    "oracledb": "^4.2.0",
     "vue": "^2.6.11"
   }
 }

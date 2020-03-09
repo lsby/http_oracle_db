@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+config/db.mjs
+lib/oracle/windows/instantclient
