@@ -19,7 +19,7 @@ var 执行sql = 配置 => sql => 参数 => {
     oracledb.getConnection(配置, (err, conn) => {
       if (err)
         return rej(err)
-      conn.execute(sql, 参数, { autoCommit: true }, (err, data) => {
+      conn.execute(sql, 参数 || {}, { autoCommit: true }, (err, data) => {
         if (err) {
           conn.close()
           return rej(err)
@@ -46,7 +46,7 @@ router.post('/runsql', async function (req, res, next) {
 
     var 配置 = config[库名称]
     if (配置 == null)
-      异常('数据库配置不存在')
+      异常('数据库配置不存在', '库名称', 库名称)
     var { metaData, rows } = await 执行sql(配置)(sql)(参数)
     res.send({ err: null, data: { metaData, rows } })
   } catch (e) {
