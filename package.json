@@ -7,6 +7,7 @@
     "dev_w": ".\\lib\\oracle\\windows\\dev.cmd"
   },
   "dependencies": {
+    "@lsby/node_ex": "^1.0.5",
     "bootstrap": "^4.4.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",

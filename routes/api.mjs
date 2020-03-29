@@ -1,16 +1,18 @@
 import express from 'express'
 import oracledb from 'oracledb'
-import * as node_api from './../lib/node_api/index.mjs'
-import * as config from './../config/db.mjs'
+import * as node_ex from '@lsby/node_ex/index.mjs'
+import config from './../config/db.mjs'
 /*
-{
-    user: 'xxx',
-    password: 'xxx',
-    connectString: 'ip:端口/sid',
+export default {
+    db1: {
+        user: 'xxx',
+        password: 'xxx',
+        connectString: 'xxx:xxx/xxx',
+    },
 }
 */
 
-var 异常 = node_api.常用.异常
+var 异常 = node_ex.常用.异常
 
 var router = express.Router()
 
