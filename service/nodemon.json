@@ -1,0 +1,11 @@
+{
+    "restartable": "rs",
+    "ignore": [
+        "*"
+    ],
+    "script": "./dist/service/main.js",
+    "verbose": false,
+    "watch": [],
+    "ext": "",
+    "nodeArgs": []
+}

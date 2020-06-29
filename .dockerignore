@@ -1,0 +1,7 @@
+**/node_modules
+**/.git
+sessions
+Dockerfile
+docker-compose.yml
+**/instantclient
+session-store.db
