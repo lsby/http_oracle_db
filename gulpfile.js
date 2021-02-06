@@ -81,7 +81,6 @@ exports.pm2_start = async function (cb) {
     await webpack_promise(webpackConf)
     执行多行命令([
         ...设置环境变量命令(),
-        `npx pm2 set pm2-logrotate:max_size 10M`,
         `npx pm2 start node -e ./logs/error.log -l ./logs/out.log --name http_oracle ./dist/${name}.js`
     ])
     cb()

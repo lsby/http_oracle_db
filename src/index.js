@@ -4,7 +4,7 @@ import db_config from '../config/db'
 import oracledb from 'oracledb'
 import os from 'os'
 
-var port = app_config.端口
+var port = app_config.port
 
 var app = express()
 

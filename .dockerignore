@@ -1,8 +1,6 @@
 **/node_modules
 **/.git
-sessions
 Dockerfile
 docker-compose.yml
-.lib/windows/instantclient
-.lib/linux/instantclient
-session-store.db
+/lib/oracle/windows/instantclient/*
+/lib/oracle/linux/instantclient/*

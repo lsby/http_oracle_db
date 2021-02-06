@@ -25,4 +25,7 @@ ln -s libclntsh.so.12.1 libclntsh.so
 cd ${work_path}
 
 echo '安装npm依赖'
-npm i
+npm i --verbose
+
+echo '设置日志'
+npm run pm2_setlog

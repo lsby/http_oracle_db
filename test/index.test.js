@@ -14,7 +14,7 @@ function post(url, data) {
 function 断言相等(变量, 值) {
     if (变量 != 值) throw `断言失败: 期待: ${值} 实际: ${变量}`
 }
-var 服务地址 = 'http://127.0.0.1:80/runsql'
+var 服务地址 = 'http://127.0.0.1:3000/runsql'
 
 it('错误sql的情况', async function () {
     var { err, data } = await post(服务地址, {
