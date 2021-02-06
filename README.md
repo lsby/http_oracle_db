@@ -32,7 +32,7 @@ npm i
 
 启动有多种方法.
 
-简单启动:
+直接启动:
 
 ```shell
 npm run start
@@ -58,7 +58,7 @@ npm run docker_start
 
 使用`urlencoded`发送`post`请求到`/runsql`即可.
 
-形式参考`test/index.js`文件和[库](https://www.npmjs.com/package/oracledb)
+请参考`test/index.js`文件和[库](https://www.npmjs.com/package/oracledb)
 
 ## TODO
 
