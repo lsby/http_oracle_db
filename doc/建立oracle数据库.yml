@@ -1,0 +1,15 @@
+# docker-compose -f ./doc/建立oracle数据库.yml up
+# hostname: localhost
+# hostname: 127.0.0.1
+# port: 1521
+# sid: EE
+# service name: EE.oracle.docker
+# username: system
+# password: oracle
+
+version: "3"
+services:
+  oracle_ee_11g:
+    image: loliconneko/oracle-ee-11g
+    ports:
+      - 1521:1521

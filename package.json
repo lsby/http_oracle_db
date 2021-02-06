@@ -1,0 +1,51 @@
+{
+    "name": "http_oracle",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "cross-env PORT=80 npx gulp start",
+        "dev": "cross-env PORT=3000 npx gulp dev",
+        "test": "npx gulp test",
+        "pm2_start": "cross-env PORT=80 npx gulp pm2_start",
+        "pm2_restart": "pm2 restart http_oracle",
+        "pm2_stop": "pm2 stop http_oracle",
+        "pm2_rm": "npm run pm2_stop && pm2 delete http_oracle",
+        "pm2_list": "pm2 list",
+        "pm2_log": "pm2 logs",
+        "pm2_setlog": "pm2 set pm2-logrotate:max_size 10M",
+        "docker_build": "docker build -t http_oracle .",
+        "docker_start": "docker-compose up -d --remove-orphans && npm run docker_log",
+        "docker_stop": "docker-compose stop",
+        "docker_log": "docker-compose logs -f --tail=\"100\"",
+        "docker_rm": "docker-compose stop && docker-compose rm -f",
+        "webpack_build": "webpack --config ./web/webpack/webpack.prod.js",
+        "webpack_analyz": "cross-env analyz=true npm run web_build",
+        "unzip_windows": "7z x ./lib/oracle/windows/instantclient.7z -o./lib/oracle/windows/",
+        "unzip_linux": "7z x ./lib/oracle/linux/instantclient.7z -o./lib/oracle/linux/"
+    },
+    "dependencies": {
+        "core-js": "^3.6.4",
+        "cross-env": "^7.0.3",
+        "cross-spawn": "^7.0.3",
+        "express": "^4.17.1",
+        "gulp": "^4.0.2",
+        "oracledb": "^5.1.0",
+        "pm2": "^4.5.4",
+        "source-map-support": "^0.5.19"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.9.0",
+        "@babel/preset-env": "^7.9.0",
+        "babel-loader": "^8.1.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "esm": "^3.2.25",
+        "mocha": "^8.2.1",
+        "request": "^2.88.2",
+        "source-map-loader": "^0.2.4",
+        "uglifyjs-webpack-plugin": "^2.2.0",
+        "webpack": "^4.42.1",
+        "webpack-cli": "^3.3.11",
+        "webpack-merge": "^4.2.2",
+        "webpack-node-externals": "^2.5.2"
+    }
+}
